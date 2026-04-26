@@ -1,0 +1,41 @@
+.container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.table th {
+  background: #1a1a2e;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin {
+  color: #2b8a3e;
+  font-weight: bold;
+}
+
+.operador {
+  color: #e67e22;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+}
+.error {
+  color: red;
+}

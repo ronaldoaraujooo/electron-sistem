@@ -1,0 +1,65 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu Painel";
+  grid-template-columns: 170px 1fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+.container div {
+  background-color: white;
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 50%;
+    justify-content: end;
+}
+.container div.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.container div.content {
+  grid-area: Painel;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.adminBadge {
+  background: #4ecdc4;
+  color: #1a1a2e;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+.dbButton {
+  background: none;
+  border: 1px solid #4ecdc4;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #1a1a2e;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.dbButton:hover {
+  background: #4ecdc4;
+  color: white;
+}

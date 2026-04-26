@@ -1,0 +1,296 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px; /* fonte base reduzida */
+    background: #f1f3f5;
+    color: #212529;
+    line-height: 1.4;
+}
+
+/* Layout principal */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* largura fixa para menu */
+    min-height: 100vh;
+}
+
+/* ===== MENU ===== */
+.menu {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 16px 12px;
+}
+
+.menu h4 {
+    color: #4ecdc4;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 6px;
+    color: #ccd6e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+    margin-bottom: 4px;
+}
+
+.menu a:hover {
+    background: #2a2a4a;
+    color: #4ecdc4;
+    padding-left: 12px;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.content {
+    padding: 20px 24px;
+    background: #f8f9fa;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* Tabs (cards) */
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    border-left: 4px solid #4ecdc4;
+    transition: transform 0.1s ease;
+}
+
+.tab h4 {
+    color: #1a1a2e;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.tab p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.tab ol {
+    padding-left: 20px;
+    margin-top: 4px;
+}
+
+.tab li {
+    margin: 6px 0;
+    font-size: 0.85rem;
+}
+
+/* Seção produtos + estoque geral */
+.produtos-section {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.area-tabela {
+    flex: 2; /* ocupa mais espaço que a barra lateral */
+    min-width: 0; /* importante para tabela não transbordar */
+}
+
+.area-tabela h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    font-size: 0.85rem;
+}
+
+th {
+    background: #1a1a2e;
+    color: white;
+    font-weight: 500;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e9ecef;
+    background: white;
+}
+
+/* Status de estoque na tabela */
+.estoque-baixo {
+    color: #c92a2a;
+    font-weight: 600;
+}
+
+.estoque-normal {
+    color: #2b8a3e;
+}
+
+/* Estoque geral (barra lateral) */
+.estoque-geral {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    align-self: start;
+}
+
+.estoque-geral h4 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #1a1a2e;
+}
+
+.barra-progresso {
+    display: flex;
+    height: 28px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 16px 0 8px;
+    background: #e9ecef;
+}
+
+.barra-verde {
+    background: #2b8a3e;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: width 0.3s;
+}
+
+.barra-vermelha {
+    background: #c92a2a;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: width 0.3s;
+}
+
+.estoque-geral p {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 8px;
+}
+
+/* Botões de ação */
+.botoes-acao {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    background: #4ecdc4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    background: #3bb3a9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #4ecdc4;
+    color: #1a1a2e;
+}
+
+.btn-outline:hover {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Botão pequeno (atualizar) */
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    background: #4ecdc4;
+}
+
+/* Utilitários */
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mb-2 {
+    margin-bottom: 12px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px;
+    }
+    
+    .menu h4 {
+        margin-bottom: 0;
+        margin-right: auto;
+    }
+    
+    .menu a {
+        display: inline-block;
+        padding: 6px 12px;
+    }
+    
+    .tabs {
+        grid-template-columns: 1fr;
+    }
+    
+    .produtos-section {
+        flex-direction: column;
+    }
+}
